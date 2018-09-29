@@ -7,6 +7,9 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     googleSheet: `https://spreadsheets.google.com/feeds/list/1Yp4e646ntPC1mwMSIlfY4lEfAoFG_ZPvnFqgoBzLetU/1/public/values?alt=json-in-script&callback=c`,
+    'ember-d3': {
+      bundle: true
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

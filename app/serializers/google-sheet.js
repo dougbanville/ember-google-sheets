@@ -19,6 +19,8 @@ export default DS.RESTSerializer.extend({
         obj.email = obj.gsx$emailaddress.$t;
         obj.name = obj.gsx$whatsyourname.$t;
         obj.ap =  obj.gsx$approved.$t;
+        obj.county=  obj.gsx$choosecounty.$t;
+
     });
     let newPayload = payload.feed.entry.filter(r=>{
         return r.ap === "Y";

@@ -4,6 +4,7 @@ import attr from 'ember-data/attr';
 export default DS.Model.extend({
 
     email: DS.attr(),
-    name: DS.attr("string")
+    name: DS.attr("string"),
+    county: DS.attr("string")
 
 });

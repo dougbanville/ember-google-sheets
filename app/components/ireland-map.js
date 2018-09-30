@@ -20,7 +20,7 @@ export default Component.extend({
         var path = d3.geo.path()
             .projection(projection);
 
-        var svg = d3.select("body").append("svg")
+        var svg = d3.select("#map").append("svg")
             .attr("width", width)
             .attr("height", height);
 
@@ -37,7 +37,7 @@ export default Component.extend({
                     return "county " + d.id;
                 })
                 .attr("d", path)
-                .on('mousedown.log', (d) => {
+                .on('mouseover.log', (d) => {
                     this.send("goToCounty", d.id);
                 });
         });

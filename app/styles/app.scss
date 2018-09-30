@@ -1,0 +1,35 @@
+@import "settings";
+@import 'foundation-sites/foundation';
+@include foundation-everything;
+
+body{
+    background: url("images/bgr.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+.background {
+    fill: none;
+    pointer-events: all;
+  }
+  
+  .feature {
+    fill: #ccc;
+    cursor: pointer;
+  }
+  
+  .feature.active {
+    fill: orange;
+  }
+  
+  .mesh {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .county{
+      fill: #ddc;
+      cursor: pointer;
+      &:hover{
+        fill: #000; 
+      }
+  }

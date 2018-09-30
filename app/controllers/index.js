@@ -10,15 +10,6 @@ export default Controller.extend({
     ajax: service(),
 
 
-    mapJson: computed(function(){
-        let url = `http://localhost/d3map/ie.json`;
-        return this.get("ajax").request(url, {}).then(json=>{
-            return json;
-        })
-    }),
-    filterModel: filterBy("model","county","Dublin"),
-
-
     actions:{
         goCounty(){
             alert("Fuck yeah")

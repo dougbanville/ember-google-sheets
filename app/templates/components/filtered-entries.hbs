@@ -1,0 +1,7 @@
+<div style="background:white;">
+    <h1>Hello</h1>
+    {{#each selectedCounty as |c|}}
+        <p>{{c.name}} - {{c.county}}</p>
+    {{/each}}
+</div>
+{{yield}}

@@ -23,7 +23,14 @@ export default Controller.extend({
             result = yield this.store.query('google-sheet',{});
         }
         return result;
-    }).drop()
+    }).drop(),
+
+    actions:{
+        goCounty(county){
+            //alert(`Fuck ${county}`)
+            this.transitionToRoute("county",county)
+        }
+    }
         
         
 });

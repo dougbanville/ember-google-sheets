@@ -7,6 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('county',{
+    path: `:county`
+  });
+  this.route('apply');
 });
 
 export default Router;

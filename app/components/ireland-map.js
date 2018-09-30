@@ -1,16 +1,17 @@
 import Component from '@ember/component';
 import d3 from 'd3';
 import topojson from "topojson-client";
+import { computed } from '@ember/object';
 
 export default Component.extend({
 
     didInsertElement() {
         this._super(...arguments);
-        var width = 960,
-            height = 960;
+        var width = 390,
+            height = 460;
 
         var projection = d3.geo.albers()
-            .center([0, 52.14])
+            .center([0, 53.20])
             .rotate([7.69, 0])
             .parallels([50, 60])
             .scale(1200 * 5)
@@ -23,7 +24,7 @@ export default Component.extend({
             .attr("width", width)
             .attr("height", height);
 
-        d3.json(`http://localhost/d3map/ie.json`, (error, ie) => {
+        d3.json(`/assets/ie.json`, (error, ie) => {
             svg.append("path")
                 .datum(topojson.feature(ie, ie.objects.counties))
                 .attr("d", path);
@@ -44,7 +45,8 @@ export default Component.extend({
 
     actions: {
         goToCounty(county) {
-            alert(`You ${county} bastid`);
+            //alert(`You ${county} bastid`);
+            this.goCounty(county);
         }
     }
 

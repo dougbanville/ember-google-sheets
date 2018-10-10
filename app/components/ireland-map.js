@@ -37,7 +37,7 @@ export default Component.extend({
                     return "county " + d.id;
                 })
                 .attr("d", path)
-                .on('mouseover.log', (d) => {
+                .on('mousedown.log', (d) => {
                     this.send("goToCounty", d.id);
                 });
         });

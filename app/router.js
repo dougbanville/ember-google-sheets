@@ -11,6 +11,7 @@ Router.map(function() {
     path: `:county`
   });
   this.route('apply');
+  this.route('map');
 });
 
 export default Router;

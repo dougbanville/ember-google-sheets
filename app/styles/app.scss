@@ -2,9 +2,21 @@
 @import 'foundation-sites/foundation';
 @include foundation-everything;
 
+.gradient {
+
+}
+
 body{
-    background: url("images/bgr.jpg") no-repeat center center fixed;
+    //background: url("images/bgr.jpg") no-repeat center center fixed;
     background-size: cover;
+    background-image:
+    radial-gradient(
+      #2d357e,
+      #1b1e47
+    );
+    background-repeat: no-repeat;
+    height:100%;
+    font-family: "Source Sans Pro";
 }
 .background {
     fill: none;
@@ -32,4 +44,20 @@ body{
       &:hover{
         fill: #000; 
       }
+  }
+  .main{
+    margin-top:20px;
+  }
+  h2{
+    font-family: Montserrat;
+
+  }
+  .button.hollow{
+    color:$white;
+    :hover{
+      color:pink;
+    }
+  }
+  .button.hollow, .button.hollow:hover, .button.hollow:focus{
+    color:$white;
   }

@@ -61,3 +61,12 @@ body{
   .button.hollow, .button.hollow:hover, .button.hollow:focus{
     color:$white;
   }
+  .ray{
+    position:absolute;
+    bottom:0;
+    right:0;
+    max-height:200px;
+    @include breakpoint(small only){
+      display:none;
+    }
+  }

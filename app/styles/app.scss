@@ -64,6 +64,7 @@ body{
     max-height:350px;
     @include breakpoint(small only){
       //display:none;
+      max-height:250px;
     }
   }
 .pad_bottom{

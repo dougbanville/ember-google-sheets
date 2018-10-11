@@ -7,15 +7,6 @@ import { filterBy } from '@ember/object/computed';
 
 export default Controller.extend({
 
-    ajax: service(),
-
-
-    actions:{
-        goCounty(){
-            alert("Fuck yeah")
-        }
-    }
-
-
+    ajax: service()
     
 });

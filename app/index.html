@@ -6,21 +6,22 @@
     <title>Club Week</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+     <!--esi <esi:include src='http://www.rte.ie/snippets/headtags/'></esi:include> -->
     {{content-for "head"}}
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i|Montserrat:400,700' type='text/css' />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/google-sheets.css">
-
     {{content-for "head-footer"}}
   </head>
   <body>
+    <!--esi <esi:include src='http://www.rte.ie/snippets/header/'></esi:include> -->
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/google-sheets.js"></script>
 
     {{content-for "body-footer"}}
+  <!--esi <esi:include src='http://www.rte.ie/snippets/header/'></esi:include> -->
   </body>
 </html>

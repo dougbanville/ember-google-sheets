@@ -5,7 +5,6 @@ import { hash } from 'rsvp';
 export default Route.extend({
 
     model(params){
-        console.log(params.county)
         return hash({
             model: this.modelFor("application"),
             county: params.county

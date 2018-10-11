@@ -3,6 +3,8 @@ import { task, timeout } from 'ember-concurrency';
 
 export default Controller.extend({
 
+    showMobileNav: false,
+
     polledModel: task(function * (){
         //getting error when nowPLaying object is deleted
         while(true){
@@ -29,6 +31,9 @@ export default Controller.extend({
         goCounty(county){
             //alert(`Fuck ${county}`)
             this.transitionToRoute("county",county)
+        },
+        toggleMobileNav(){
+            this.toggleProperty("showMobileNav")
         }
     }
         

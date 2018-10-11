@@ -2,36 +2,37 @@
   <div class="grid-y medium-grid-frame">
     <div class="cell shrink header medium-cell-block-container">
       <div class="grid-x grid-padding-x">
-        <div class="cell medium-4 small-12">
-          
+        <div class="cell medium-12 small-12">
+            <a href="https://rte.ie/radio1">
+            <img src="https://static.rasset.ie/static/radio/images/Radio1_landscape.png" alt="" style="max-width:200px; padding-bottom:30px;margin:0 auto; display:block;">
+            </a>
         </div>
-        <div class="cell medium-4 small-12 medium-cell-block">
-          
-        </div>
-        <div class="cell medium-4">
-          
-        </div>
+ 
       </div>
     </div>
-    <div class="cell medium-auto medium-cell-block-container">
+    <div class="cell medium-auto medium-cell-block-container small-cell-block-container">
       <div class="grid-x grid-padding-x">
-        <div class="cell medium-4 small-12 small-medium-cell-block-y medium-cell-block-y">
+        <div class="cell medium-4 small-12 small-cell-block-y medium-cell-block-y">
+          <div class="mobile_nav show-for-small-only">
+            <button {{action "toggleMobileNav"}} class="mobNav">
+              {{#if showMobileNav}}
+                <i class="fa fa-times"></i>
+              {{else}}
+              <i class="fa fa-bars"></i>
+              {{/if}}
+            </button>
+          </div>
           {{#link-to "index"}}
-        <img src="assets/images/joinaclub.png" alt="" style="margin-bottom:20px;">
+        <img src="assets/images/joinaclub.png" alt="" style="margin-bottom:20px;" class="logo">
          {{/link-to}}
-        {{#link-to "apply"}}
-        <button class="large hollow button expanded">
-          <i class="fas fa-plus-square"></i>
-          Enter Your Club</button>
-       {{/link-to}}
-        {{#link-to "map"}}
-        <button class="large hollow button expanded">Map</button>
-       {{/link-to}}
-               {{#link-to "map"}}
-        <button class="large hollow button expanded">
-          <i class="fab fa-twitter"></i>
-        </button>
-       {{/link-to}}
+         <div class="dt_nav">
+            {{nav-buttons  toggle=(action 'toggleMobileNav')}}
+       </div>
+        </div>
+        <div class="small-12 show-for-small-only">
+          {{#if showMobileNav}}
+            {{nav-buttons toggle=(action 'toggleMobileNav')}}
+          {{/if}}
         </div>
         <div class="cell medium-8 small-12 medium-cell-block-y">
             {{outlet}}
@@ -40,13 +41,10 @@
     </div>
     <div class="cell shrink footer" style="align-items: center;">
         <div class="cell medium-4 medium-cell-block-y">
-            <img src="https://static.rasset.ie/static/radio/images/Radio1_landscape.png" alt="" style="max-width:200px; margin-bottom:20px;">
         </div>
     </div>
   </div>
 </div>
-
-<img src="assets/images/ray.png" class="ray">
 
 
 

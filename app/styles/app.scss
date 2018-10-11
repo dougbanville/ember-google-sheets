@@ -2,10 +2,6 @@
 @import 'foundation-sites/foundation';
 @include foundation-everything;
 
-.gradient {
-
-}
-
 body{
     //background: url("images/bgr.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -42,7 +38,7 @@ body{
       fill: #ddc;
       cursor: pointer;
       &:hover{
-        fill: #000; 
+        fill: #38aae0; 
       }
   }
   .main{
@@ -62,11 +58,46 @@ body{
     color:$white;
   }
   .ray{
-    position:absolute;
+    position:fixed;
     bottom:0;
     right:0;
-    max-height:200px;
+    max-height:350px;
     @include breakpoint(small only){
-      display:none;
+      //display:none;
     }
   }
+.pad_bottom{
+  height:200px;
+}
+.map_container{
+  //border:1px solid white;
+  width:390px;
+  height:460px;
+  margin: 0 auto;
+  margin-top:20px;
+}
+.activeCounty{
+  height:50px;
+}
+.dt_nav{
+  @include breakpoint(small only){
+    display:none;
+  }
+}
+.mobile_nav{
+  float:right;
+  font-size:30px;
+  i{
+    color:$white;
+  }
+}
+.logo{
+  @include breakpoint(small only){
+    max-height:100px;
+  }
+}
+.mobNav{
+  padding:1em;
+  border: 0!important;
+}
+button:focus {outline:0;}

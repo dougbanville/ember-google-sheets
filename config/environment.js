@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'google-sheets',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     googleSheet: `https://spreadsheets.google.com/feeds/list/1Yp4e646ntPC1mwMSIlfY4lEfAoFG_ZPvnFqgoBzLetU/1/public/values?alt=json-in-script&callback=c`,
     'ember-d3': {
       bundle: true
@@ -49,6 +49,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.rootURL = '/clubweek/';
   }
 
   return ENV;

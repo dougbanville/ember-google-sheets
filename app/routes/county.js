@@ -4,6 +4,10 @@ import { hash } from 'rsvp';
 
 export default Route.extend({
 
+    activate(){
+        window.scrollTo(0,0);
+    },
+
     model(params){
         return hash({
             model: this.modelFor("application"),

@@ -13,7 +13,7 @@ export default DS.RESTSerializer.extend({
     query(store, type, query) {
 
         let url = `${ENV.googleSheet}`;
-
+        console.log(url)
         return this.get("ajax").request(url, {
             dataType: "jsonp",
             jsonpCallback:"c",

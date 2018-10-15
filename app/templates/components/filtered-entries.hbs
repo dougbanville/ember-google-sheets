@@ -1,7 +1,18 @@
 <div>
     <h1>{{county}}</h1>
-    {{#each selectedCounty as |c|}}
-        <p>{{c.name}} - {{c.county}}</p>
-    {{/each}}
 </div>
+{{#if selectedCounty }}
+{{#each selectedCounty as |c|}}
+<h3>{{c.clubName}}</h3>
+<p>{{c.clubDescription}}</p>
+{{#if c.website}}
+<p>Website: {{c.website}}</p>
+{{/if}}
+<hr>
+ {{/each}}
+ {{else}}
+ <div style="min-height:350px;">
+     <h3>No Clubs for this county yet</h3>
+ </div>
+{{/if}}
 {{yield}}

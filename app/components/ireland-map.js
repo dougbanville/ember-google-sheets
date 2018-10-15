@@ -24,7 +24,7 @@ export default Component.extend({
             .attr("width", width)
             .attr("height", height);
 
-        d3.json(`/assets/ie.json`, (error, ie) => {
+        d3.json(`assets/ie.json`, (error, ie) => {
             svg.append("path")
                 .datum(topojson.feature(ie, ie.objects.counties))
                 .attr("d", path);

@@ -4,6 +4,7 @@
 {{#if selectedCounty }}
 {{#each selectedCounty as |c|}}
 <h3>{{c.clubName}}</h3>
+<h6>Open Day: {{c.displayDate}}</h6>
 <p>{{c.clubDescription}}</p>
 {{#if c.website}}
 <p>Website: {{c.website}}</p>

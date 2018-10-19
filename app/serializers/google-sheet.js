@@ -24,6 +24,9 @@ export default DS.RESTSerializer.extend({
         obj.clubName = obj.gsx$yourclubsname.$t;
         obj.clubDescription = obj.gsx$abriefdescriptionofyourclub.$t;
         obj.website = obj.gsx$website.$t;
+        obj.eventDate= obj.gsx$dateofyouropenday.$t;
+        obj.eventTime = obj.gsx$time.$t;
+
 
     });
     let newPayload = payload.feed.entry.filter(r=>{
